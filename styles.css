@@ -7,6 +7,9 @@ body {
   line-height: 1.5;
   color: #202020;
   background: #f2f9fc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 header {
   background: linear-gradient(135deg, #1a73e8, #0b4f7e);
@@ -78,6 +81,8 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.95rem;
+  margin-bottom: 0;
+  margin-top: auto;
 }
 form .field-row {
   margin-bottom: 0.75rem;
@@ -159,5 +164,111 @@ button:focus {
   nav .menu {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+
+}
+
+.campaign-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(to right, #eef5f8, #ffffff);
+  padding: 1.5rem;
+}
+
+.campaign-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* LEFT IMAGE */
+.campaign-image img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* RIGHT TEXT */
+.campaign-text {
+  flex: 1;
+}
+
+.campaign-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #1b4f6b;
+}
+
+.campaign-text p {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+
+.campaign-text h3 {
+  margin-bottom: 1rem;
+  color: #1b4f6b;
+}
+
+/* PROGRESS + BUTTON ROW */
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 18px;
+  background: #cfd8dc;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #1b4f6b;
+  border-radius: 999px;
+}
+
+/* GREEN BUTTON */
+.donate-btn {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.donate-btn:hover {
+  background: #218838;
+}
+
+.amount {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .campaign-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .campaign-image img {
+    width: 100%;
+  }
+
+  .progress-row {
+    flex-direction: column;
+  }
+
+  .donate-btn {
+    width: 100%;
   }
 }
